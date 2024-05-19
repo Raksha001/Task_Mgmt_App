@@ -69,35 +69,34 @@ pipeline
                 }
             }
         }
-        stage('Deploying Frontend Container to Minikube') 
-        {
-            steps 
-            {
-                script 
-                {
-                        // kubernetesDeploy (configs: 'deploymentservice.yaml', kubeconfigId: 'kubernetes_token')
-                        // Apply Deployment
-                        //sh "kubectl apply -f deployment.yaml --validate=false"
-                        // Apply Service (if needed)
-                        // sh "kubectl apply -f service.yaml --validate=false"
+        // stage('Deploying Frontend Container to Minikube') 
+        // {
+        //     steps 
+        //     {
+        //         script 
+        //         {
+        //                 // kubernetesDeploy (configs: 'deploymentservice.yaml', kubeconfigId: 'kubernetes_token')
+        //                 // Apply Deployment
+        //                 //sh "kubectl apply -f deployment.yaml --validate=false"
+        //                 // Apply Service (if needed)
+        //                 // sh "kubectl apply -f service.yaml --validate=false"
  
-                        // Wait for the Deployment to be ready
-
-                        //timeout(time: 5, unit: 'minutes') 
-
-                        //{
-
-                            //waitForDeployment("expense-management-frontend")
-
-                        //}
+        //                 // Wait for the Deployment to be ready
 
 
+        //                 //{
 
-                }
+        //                     //waitForDeployment("expense-management-frontend")
 
-            }
+        //                 //}
 
-        }
+
+
+        //         }
+
+        //     }
+
+        // }
 
         stage('Docker build')
 
