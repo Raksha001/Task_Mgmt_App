@@ -80,67 +80,35 @@ pipeline
         //                 //sh "kubectl apply -f deployment.yaml --validate=false"
         //                 // Apply Service (if needed)
         //                 // sh "kubectl apply -f service.yaml --validate=false"
- 
         //                 // Wait for the Deployment to be ready
-
-
         //                 //{
-
         //                     //waitForDeployment("expense-management-frontend")
-
         //                 //}
-
-
-
         //         }
-
         //     }
-
         // }
-
         stage('Docker build')
-
         {
-
             steps
-
             {
-
                 echo "yet to do"
-
             }
-
         }
-
     }
-
 }
 
 def waitForDeployment(deploymentName) {
-
     def count = 0
-
     while (count < 12) { // Check every 30 seconds for up to 6 minutes
-
         def deploymentStatus = sh(script: "kubectl get deployment ${deploymentName} -o jsonpath='{.status.readyReplicas}'", returnStdout: true).trim()
-
         if (deploymentStatus == "1") {
-
             echo "Deployment ${deploymentName} is ready"
-
             return
-
         } else {
-
             count++
-
             echo "Waiting for Deployment ${deploymentName} to be ready (${count * 30}s)"
-
             sleep(30)
-
         }
-
     }
-
     error "Deployment ${deploymentName} did not become ready within the timeout period"
 }
