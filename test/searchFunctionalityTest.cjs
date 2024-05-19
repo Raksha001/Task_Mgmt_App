@@ -8,7 +8,7 @@ const edge = require('selenium-webdriver/edge');
       .setEdgeOptions(edgeOptions)
       .build();
     
-     await driver.get('http://localhost:5173/');
+     await driver.get('https://100.25.23.111:8087/');
     let addBtn = await  driver.findElement(By.xpath("//body/div[@id='root']/button[1]/*[1]"));
     await addBtn.click();
     //calling the create task to create a new task
@@ -17,6 +17,7 @@ const edge = require('selenium-webdriver/edge');
     await searchTask(driver,"GYM");
     
   })();
+
 
   async function createTask(driver, taskName, descName, categoryName) {
     try {

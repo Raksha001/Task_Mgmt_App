@@ -14,7 +14,7 @@ const firefox = require('selenium-webdriver/firefox');
     .setFirefoxOptions(firefoxOptions)
     .build();
   
-  await driver.get('http://localhost:5173/add');
+  await driver.get('https://100.25.23.111:8087/add');
 
   try {
     // Find the input field for adding tasks
