@@ -69,6 +69,17 @@ pipeline
                 }
             }
         }
+
+        stage('Run Docker Images') {
+            steps {
+                script {
+                    // Run the frontend Docker image
+                    docker.image("${dockerimagename}:frontend").run('-d -p 3000:3000')
+                    // Run the backend Docker image
+                    docker.image("${dockerimagename}:backend").run('-d -p 8085:8085')
+                }
+            }
+        }
         // stage('Deploying Frontend Container to Minikube') 
         // {
         //     steps 
