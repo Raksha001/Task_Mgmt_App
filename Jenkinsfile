@@ -48,7 +48,7 @@ pipeline
                 script 
                     {
                         // Build the Docker image
-                        docker.build("${dockerimagename}:app")
+                        dockerImage = docker.build("${dockerimagename}:app")
                     }
             }
         }
