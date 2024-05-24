@@ -2,7 +2,7 @@ pipeline
     {
     environment 
     {
-        dockerimagename = "raksha001/deveops-task-mgmt-app"
+        dockerimagename = "raksha001/devops-task-mgmt-app"
         dockerImage = ""
     }
     agent any
@@ -74,9 +74,8 @@ pipeline
             steps {
                 script {
                     // Run the frontend Docker image
-                    docker.image("${dockerimagename}:frontend").run('-d -p 3000:3000')
-                    // Run the backend Docker image
-                    docker.image("${dockerimagename}:backend").run('-d -p 8085:8085')
+                    docker.image("${dockerimagename}:task_mgmt_app").run('-d -p 3000:3000')
+                    
                 }
             }
         }
