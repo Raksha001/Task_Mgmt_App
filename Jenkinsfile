@@ -48,7 +48,7 @@ pipeline
                 script 
                     {
                         // Build the Docker image
-                        dockerImage = docker.build dockerimagename
+                        docker.build("${dockerimagename}:app")
                     }
             }
         }
@@ -74,7 +74,7 @@ pipeline
             steps {
                 script {
                     // Run the frontend Docker image
-                    docker.image("${dockerimagename}:task_mgmt_app").run('-d -p 3000:3000')
+                    docker.image("${dockerimagename}:app").run('-d -p 3000:3000')
                     
                 }
             }
