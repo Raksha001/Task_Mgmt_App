@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task-management-frontend #The name of the Kubernetes Deployment to be created in the Kubernetes cluster
+  labels:
+    app: task-management-frontend
+spec:
+  replicas: 2 #The number of pods to be created in the Kubernetes cluster for the React.js application container
+  selector:
+    matchLabels:
+      app: task-management-frontend
+  template:
+    metadata:
+      labels:
+        app: task-management-frontend 
+    spec:
+      containers:
+      - name: task-management-frontend #The name of the react.js application container
+        image: raksha001/devops-task-mgmt-app:task_mgmt_app #The Docker image for building the React.js application container
+        ports:
+        - containerPort: 8087 #The port for the React.js application container
