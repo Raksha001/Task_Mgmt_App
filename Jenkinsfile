@@ -74,7 +74,7 @@ pipeline
             steps {
                 script {
                     // Run the frontend Docker image
-                    docker.image("${dockerimagename}:app").run('-d -p 3000:3000')
+                    docker.image("${dockerimagename}:app").run('-d -p 8087:8087')
                     
                 }
             }
