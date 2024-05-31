@@ -34,13 +34,13 @@ pipeline
                 }
             }
         }
-        stage('Selenium testing')
-        {
-            steps
-            {
-                echo "yet to do"
-            }
-        }
+        // stage('Selenium testing')
+        // {
+        //    steps
+        //    {
+        //        echo "yet to do"
+        //    }
+        //}
         stage('Docker Image Build') 
         { 
             steps 
@@ -97,13 +97,13 @@ pipeline
         //         }
         //     }
         // }
-        stage('Docker build')
-        {
-            steps
-            {
-                echo "yet to do"
-            }
-        }
+        // stage('Docker build')
+        // {
+        //   steps
+        //   {
+        //        echo "yet to do"
+        //    }
+        //}
     }
 }
 
