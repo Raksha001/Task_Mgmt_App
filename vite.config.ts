@@ -8,6 +8,9 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 8087}
   ,
+  build: {
+    outDir: 'dist',
+  },
   plugins: [
     react(),
     VitePWA({
