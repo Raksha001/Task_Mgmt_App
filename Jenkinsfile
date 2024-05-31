@@ -92,7 +92,7 @@ pipeline
         //                 // sh "kubectl apply -f service.yaml --validate=false"
         //                 // Wait for the Deployment to be ready
         //                 //{
-        //                     //waitForDeployment("expense-management-frontend")
+        //                     //waitForDeployment("task-management-frontend")
         //                 //}
         //         }
         //     }
