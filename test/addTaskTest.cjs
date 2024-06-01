@@ -1,7 +1,7 @@
-const { Builder, By, Key, until } = require('selenium-webdriver');
+const { Builder, By, Key } = require('selenium-webdriver');
 const firefox = require('selenium-webdriver/firefox');
 
-(async function example() {
+(async function addTask() {
   // Configure Firefox options
   let firefoxOptions = new firefox.Options();
 
@@ -14,7 +14,7 @@ const firefox = require('selenium-webdriver/firefox');
     .setFirefoxOptions(firefoxOptions)
     .build();
   
-  await driver.get('https://100.25.23.111:8087/add');
+  await driver.get('http://localhost:8087/add');
 
   try {
     // Find the input field for adding tasks

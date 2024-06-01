@@ -1,14 +1,14 @@
 const { Builder, By, Key, until, Browser } = require('selenium-webdriver');
 const edge = require('selenium-webdriver/edge');
 
-(async function example() {
+(async function search() {
     let edgeOptions = new edge.Options();
     let driver = await new Builder()
       .forBrowser('MicrosoftEdge')
       .setEdgeOptions(edgeOptions)
       .build();
     
-     await driver.get('https://100.25.23.111:8087/');
+     await driver.get('http://localhost:8087/');
     let addBtn = await  driver.findElement(By.xpath("//body/div[@id='root']/button[1]/*[1]"));
     await addBtn.click();
     //calling the create task to create a new task
