@@ -20,7 +20,7 @@ spec:
         image: raksha001/devops-task-mgmt-app:task_mgmt_app
         resources:
           limits:
-            memory: "100Mi"
+            memory: 512Mi
         ports:
         - containerPort: 8087
 
