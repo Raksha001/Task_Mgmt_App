@@ -14,6 +14,7 @@ spec:
       labels:
         app: task-management-frontend
     spec:
+      automountServiceAccountToken: false
       containers:
       - name: task-management-frontend
         image: raksha001/devops-task-mgmt-app:task_mgmt_app
